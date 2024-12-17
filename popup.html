@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitelist Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+        }
+
+        #input-group {
+            display: flex;
+            flex: 0 0 25em;
+            border-bottom: solid 5px #2ed5e0;
+        }
+
+        #input-group input {
+            min-width: 80%;
+        }
+
+        #input-group button {
+            margin-left: 5px;
+        }
+
+        input,
+        button {
+            margin: 5px 0;
+            width: 100%;
+            padding: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 10px 0px;
+            max-height: 250px;
+            overflow-y: scroll;
+            padding-right: 10px;
+
+        }
+
+        li {
+            margin: 8px 0;
+            padding: 2px 5px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 3px 2px 2px #CCC;
+
+
+        }
+
+        li span {
+            min-width: 60%;
+        }
+
+        .edit,
+        .delete {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            width: 50px;
+            font-size: 11px;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Whitelist Channels</h2>
+    <div id="input-group">
+        <input type="text" id="channelId" placeholder="Enter Channel ID" />
+        <button id="addChannel">+</button>
+    </div>
+
+    <ul id="whitelist"></ul>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
